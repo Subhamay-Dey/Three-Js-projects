@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import {Canvas, useFrame, useLoader} from "@react-three/fiber";
 import styles from "@/components/cube/style.module.scss"
 import { TextureLoader } from 'three';
@@ -28,6 +28,20 @@ function Cube() {
     x: useMotionValue(0),
     y: useMotionValue(0)
   }
+
+  const manageMouseMove = (e:any) => {
+    const {clientX, clientY} = e;
+  }
+
+  useEffect(() => {
+    
+    window.addEventListener("mousemove", manageMouseMove)
+  
+    return () => {
+      window.removeEventListener("mouse", manageMouseMove)
+    }
+  }, [])
+  
 
   // useFrame((state, delta) => {
   //   mesh.current.rotation.x += delta * 0.25;
