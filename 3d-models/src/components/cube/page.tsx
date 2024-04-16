@@ -5,6 +5,8 @@ import {Canvas, useFrame, useLoader} from "@react-three/fiber";
 import styles from "@/components/cube/style.module.scss"
 import { TextureLoader } from 'three';
 import { OrbitControls } from '@react-three/drei';
+import {useMotionValue, useSpring} from 'framer-motion';
+
 
 export default function index() {
   return (
@@ -22,11 +24,16 @@ export default function index() {
 function Cube() {
 
   const mesh = useRef(null);
-  useFrame((state, delta) => {
-    mesh.current.rotation.x += delta * 0.25;
-    mesh.current.rotation.y += delta * 0.25;
-    mesh.current.rotation.z += delta * 0.25;
-  })
+  const mouse = {
+    x: useMotionValue(0),
+    y: useMotionValue(0)
+  }
+
+  // useFrame((state, delta) => {
+  //   mesh.current.rotation.x += delta * 0.25;
+  //   mesh.current.rotation.y += delta * 0.25;
+  //   mesh.current.rotation.z += delta * 0.25;
+  // })
 
   const texture_1 = useLoader(TextureLoader, "/images/pic1.avif")
   const texture_2= useLoader(TextureLoader, "/images/pic2.jpg")
