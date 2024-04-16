@@ -1,3 +1,5 @@
+'use client'
+
 import Cube from '@/components/cube/page';
 import React from 'react';
 
