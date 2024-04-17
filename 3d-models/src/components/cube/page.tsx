@@ -24,30 +24,30 @@ export default function index() {
 function Cube() {
 
   const mesh = useRef(null);
-  const mouse = {
-    x: useMotionValue(0),
-    y: useMotionValue(0)
-  }
+  // const mouse = {
+  //   x: useMotionValue(0),
+  //   y: useMotionValue(0)
+  // }
 
-  const manageMouseMove = (e:any) => {
-    const {clientX, clientY} = e;
-  }
+  // const manageMouseMove = (e:any) => {
+  //   const {clientX, clientY} = e;
+  // }
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    window.addEventListener("mousemove", manageMouseMove)
+  //   window.addEventListener("mousemove", manageMouseMove)
   
-    return () => {
-      window.removeEventListener("mouse", manageMouseMove)
-    }
-  }, [])
+  //   return () => {
+  //     window.removeEventListener("mouse", manageMouseMove)
+  //   }
+  // }, [])
   
 
-  // useFrame((state, delta) => {
-  //   mesh.current.rotation.x += delta * 0.25;
-  //   mesh.current.rotation.y += delta * 0.25;
-  //   mesh.current.rotation.z += delta * 0.25;
-  // })
+  useFrame((state, delta) => {
+    mesh.current.rotation.x += delta * 0.25;
+    mesh.current.rotation.y += delta * 0.25;
+    mesh.current.rotation.z += delta * 0.25;
+  })
 
   const texture_1 = useLoader(TextureLoader, "/images/pic1.avif")
   const texture_2= useLoader(TextureLoader, "/images/pic2.jpg")
