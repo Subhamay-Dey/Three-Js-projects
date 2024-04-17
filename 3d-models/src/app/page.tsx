@@ -15,8 +15,8 @@ function page() {
   
   return (
     <main>
-      {/* <Cube/> */}
-      <Scene/>
+      <Cube/>
+      {/* <Scene/> */}
     </main>
   )
 }
