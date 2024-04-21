@@ -6,6 +6,7 @@ import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import dynamic from 'next/dynamic';
 import React from 'react';
+import { AmbientLight } from 'three';
 
 const Scene = dynamic(
   () => import('@/components/Scene'),
@@ -19,6 +20,7 @@ function page() {
   return (
     <Canvas >
       <OrbitControls/>
+      <AmbientLight/>
       <Perfume/>
     </Canvas>
   )
