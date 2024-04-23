@@ -2,7 +2,7 @@
 
 import { Perfume } from '@/components/Perfume';
 import Cube from '@/components/cube/page';
-import { OrbitControls } from '@react-three/drei';
+import { Environment, OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import dynamic from 'next/dynamic';
 import React from 'react';
@@ -18,11 +18,15 @@ const Scene = dynamic(
 function page() {
   
   return (
+    <div className='w-full h-screen flex flex-row'>
     <Canvas >
+      <Environment preset="dawn"/>
       <OrbitControls/>
-      <AmbientLight/>
       <Perfume/>
     </Canvas>
+    <Cube/>
+    
+    </div>
   )
 }
 
