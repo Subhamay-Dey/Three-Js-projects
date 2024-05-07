@@ -18,14 +18,14 @@ const Scene = dynamic(
 function page() {
   
   return (
-    <div className='w-full h-screen flex flex-row'>
+    <div className='w-full h-screen flex'>
+      <Cube/>
     <Canvas >
       <Environment preset="dawn"/>
       <OrbitControls/>
       <Perfume/>
     </Canvas>
-    <Cube/>
-    
+      
     </div>
   )
 }
