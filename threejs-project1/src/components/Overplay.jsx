@@ -37,19 +37,19 @@ export const Overlay = () => {
 
   return (
     <Scroll html>
-      <div class="w-screen ">
+      <div class="w-screen">
         <Section opacity={opacityFirstSection}>
-          <h1 className="font-semibold font-serif text-2xl">
+          <h1 className="font-semibold font-serif text-2xl select-none">
             Hello, I'm Subhamay Dey
           </h1>
-          <p className="text-gray-500">Welcome to my three js portfolio</p>
-          <p className="mt-3">I know:</p>
-          <ul className="leading-9">
+          <p className="text-gray-500 select-none">Welcome to my three js portfolio</p>
+          <p className="mt-3 select-none">I know:</p>
+          <ul className="leading-9 select-none">
             <li>🧑‍💻 How to code</li>
             <li>🧑‍🏫 How to learn</li>
             <li>📦 How to deliver</li>
           </ul>
-          <p className="animate-bounce  mt-6">↓</p>
+          <p className="animate-bounce  mt-6 select-none">↓</p>
         </Section>
         <Section right opacity={opacitySecondSection}>
           <h1 className="font-semibold font-serif text-2xl select-none">
@@ -72,7 +72,6 @@ export const Overlay = () => {
           <ul className="leading-9 select-none">
             <li>NodeJS</li>
             <li>ExpressJS</li>
-            <li>NestJS</li>
             <li>MongoDb</li>
             <li>PassportJS</li>
             <li>Firebase</li>
