@@ -40,6 +40,24 @@ export function Office(props) {
             0.5,
         );
 
+        tl.current.from(
+            atticRef.current.position,{
+                duration: 0.5,
+
+                y: 2,
+            },
+            0,
+        );
+
+        tl.current.from(
+            atticRef.current.position,{
+                duration: 1.5,
+
+                z: -2,
+            },
+            1.5,
+        );
+
     }, [])
 
   return (
