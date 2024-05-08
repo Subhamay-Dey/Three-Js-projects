@@ -41,6 +41,15 @@ export function Office(props) {
         );
 
         tl.current.from(
+            LibraryRef.current.rotation, {
+                duration: 0.5,
+
+                y: -Math.PI/2
+            },
+            0,
+        )
+
+        tl.current.from(
             atticRef.current.position,{
                 duration: 0.5,
 
