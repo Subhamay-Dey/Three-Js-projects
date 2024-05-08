@@ -1,6 +1,6 @@
 import {OrbitControls, ScrollControls} from "@react-three/drei";
 import { Office } from "./Office";
-import { Overlay } from "./Overlay";
+import { Overlay } from "./Overplay";
 
 export const Experience = () => {
     return (

@@ -26,9 +26,11 @@ const Section = (props) => {
 export const Overlay = () => {
   const scroll = useScroll();
   const [opacityFirstSection, setOpacityFirstSection] = useState(1);
+  const [opacitySecondSection, setOpacitySecondSection] = useState(1);
 
   useFrame(() => {
     setOpacityFirstSection(1 - scroll.range(0, 1 / 3));
+    setOpacitySecondSection(scroll.curve(1 / 3, 1 / 3));
   });
 
   return (
@@ -47,6 +49,31 @@ export const Overlay = () => {
           </ul>
           <p className="animate-bounce  mt-6">↓</p>
         </Section>
+        <Section right opacity={opacitySecondSection}>
+          <h1 className="font-semibold font-serif text-2xl">
+            Here are my skillsets 🔥
+          </h1>
+          <p className="mt-6">
+            <b>Frontend 🚀</b>
+          </p>
+          <ul className="leading-9">
+            <li>ReactJS</li>
+            <li>React Native</li>
+            <li>Tailwind</li>
+            <li>ThreeJS</li>
+          </ul>
+          <p className="mt-3">
+            <b>Backend 🔬</b>
+          </p>
+          <ul className="leading-9">
+            <li>NodeJS</li>
+            <li>ExpressJS</li>
+            <li>NestJS</li>
+            <li>MongoDb</li>
+          </ul>
+          <p className="animate-bounce  mt-6">↓</p>
+        </Section>
+        
       </div>
     </Scroll>
   );
