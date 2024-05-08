@@ -47,7 +47,7 @@ export function Office(props) {
                 y: -Math.PI/2
             },
             0,
-        )
+        );
 
         tl.current.from(
             atticRef.current.position,{
@@ -65,6 +65,15 @@ export function Office(props) {
                 z: -2,
             },
             1.5,
+        );
+
+        tl.current.from(
+            atticRef.current.rotation, {
+                duration: 0.5,
+
+                y: Math.PI/2
+            },
+            1,
         );
 
     }, [])
