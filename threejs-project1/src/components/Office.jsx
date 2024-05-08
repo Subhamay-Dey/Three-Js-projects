@@ -31,6 +31,15 @@ export function Office(props) {
             0
         );
 
+        tl.current.from(
+            LibraryRef.current.position, {
+                duration: 0.5,
+                
+                x: -2,
+            },
+            0.5,
+        );
+
     }, [])
 
   return (
