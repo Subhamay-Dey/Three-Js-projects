@@ -27,10 +27,12 @@ export const Overlay = () => {
   const scroll = useScroll();
   const [opacityFirstSection, setOpacityFirstSection] = useState(1);
   const [opacitySecondSection, setOpacitySecondSection] = useState(1);
+  const [opacityLastSection, setOpacityLastSection] = useState(1);
 
   useFrame(() => {
     setOpacityFirstSection(1 - scroll.range(0, 1 / 3));
     setOpacitySecondSection(scroll.curve(1 / 3, 1 / 3));
+    setOpacityLastSection(scroll.range(2 / 3, 1 / 3));
   });
 
   return (
@@ -60,6 +62,7 @@ export const Overlay = () => {
             <li>ReactJS</li>
             <li>React Native</li>
             <li>Tailwind</li>
+            <li>Scss & Less</li>
             <li>ThreeJS</li>
           </ul>
           <p className="mt-3">
@@ -70,10 +73,25 @@ export const Overlay = () => {
             <li>ExpressJS</li>
             <li>NestJS</li>
             <li>MongoDb</li>
+            <li>Firebase</li>
           </ul>
           <p className="animate-bounce  mt-6">↓</p>
         </Section>
-        
+        <Section opacity={opacityLastSection}>
+          <h1 className="font-semibold font-serif text-2xl">
+             U can Connect with me
+          </h1>
+          <p className="text-gray-500 mb-2">
+            I may help with your projects and learning.
+          </p>
+          <p className="mt-6 p-3 bg-slate-100 rounded-lg flex">
+          🌐
+          <p className="font-semibold">
+              <a href="https://www.linkedin.com/in/subhamay-dey-5b8273292/">My LinkedIn Profile</a>
+            </p>
+              <p className="pl-4">⬅️ Click</p>
+          </p>
+        </Section>
       </div>
     </Scroll>
   );
