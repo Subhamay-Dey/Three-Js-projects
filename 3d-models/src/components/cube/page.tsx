@@ -24,23 +24,23 @@ export default function index() {
 function Cube() {
 
   const mesh = useRef(null);
-  // const mouse = {
-  //   x: useMotionValue(0),
-  //   y: useMotionValue(0)
-  // }
+  const mouse = {
+    x: useMotionValue(0),
+    y: useMotionValue(0)
+  }
 
-  // const manageMouseMove = (e:any) => {
-  //   const {clientX, clientY} = e;
-  // }
+  const manageMouseMove = (e:any) => {
+    const {clientX, clientY} = e;
+  }
 
-  // useEffect(() => {
+  useEffect(() => {
     
-  //   window.addEventListener("mousemove", manageMouseMove)
+    window.addEventListener("mousemove", manageMouseMove)
   
-  //   return () => {
-  //     window.removeEventListener("mouse", manageMouseMove)
-  //   }
-  // }, [])
+    return () => {
+      window.removeEventListener("mouse", manageMouseMove)
+    }
+  }, [])
   
 
   useFrame((state, delta) => {
