@@ -5,7 +5,7 @@ import Home from './pages/Home';
 function App() {
   return (
     <>
-       <main className='app transition ease-in'>
+       <main className='app transition ease-in select-none'>
         <Home/>
         <Canvas/>
         <Customizer/>
