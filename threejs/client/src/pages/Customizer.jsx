@@ -23,7 +23,7 @@ const Customizer = () => {
           <motion.div
             key="custom"
             className='absolute top-0 left-0 z-10'
-            {...slideAnimation('top')}
+            {...slideAnimation('left')}
           >
             <div className='flex items-center min-h-screen'>                           
               <div className='editortabs-container tabs'>

@@ -3,7 +3,7 @@ import { easing } from 'maath'
 import { useFrame } from '@react-three/fiber'
 import { AccumulativeShadows, RandomizedLight } from '@react-three/drei';
 
-const Backdrop = () => {
+export default function Backdrop() {
   const shadows = useRef();
 
   return (
@@ -33,5 +33,3 @@ const Backdrop = () => {
     </AccumulativeShadows>
   )
 }
-
-export default Backdrop
