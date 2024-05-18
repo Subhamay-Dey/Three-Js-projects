@@ -61,11 +61,9 @@ const Customizer = () => {
         break;
       case "stylishShirt":
           state.isFullTexture = !activeFilterTab[tabName];
-        break;
       default:
         state.isLogoTexture = true;
         state.isFullTexture = false;
-        break;
     }
   }
 
@@ -122,8 +120,8 @@ const Customizer = () => {
                     key= {tab.name}
                     tab= {tab}
                     isFilterTab
-                    isActiveTab=""
-                    handleClick= {() => {}}
+                    isActiveTab={activeFilterTab[tab.name]}
+                    handleClick= {() => handleActiveFilterTab(tab.name)}
                   />
                 ))}
           </motion.div>
