@@ -67,15 +67,6 @@ const Customizer = () => {
         state.isFullTexture = false;
         break;
     }
-
-    // after setting the state, activeFilterTab is updated
-
-    setActiveFilterTab((prevState) => {
-      return {
-        ...prevState,
-        [tabName]: !prevState[tabName]
-      }
-    })
   }
 
   const readFile = (type) => {
